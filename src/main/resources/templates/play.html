@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадай число — Игра</title>
+</head>
+<body>
+
+<h1>Угадай число!</h1>
+
+<p>Я загадал число от 0 до 100. Попробуй угадать!</p>
+
+<p>Попыток сделано: <span th:text="${attempts}"></span></p>
+
+<!-- Сообщение об ошибке (требование 4) -->
+<p th:if="${error}" style="color: red;" th:text="${error}"></p>
+
+<!-- Подсказка больше/меньше (требование 6) -->
+<p th:if="${hint}" style="color: blue;" th:text="${hint}"></p>
+
+<form method="post" action="/guess">
+    <input type="number" name="number" placeholder="Введи число от 0 до 100" min="0" max="100"/>
+    <button type="submit">Проверить!</button>
+</form>
+
+<br/>
+<a href="/">На главную</a>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадай число — Итоги</title>
+</head>
+<body>
+
+<h1>Итоги сеанса</h1>
+
+<!-- Требование 9.1 -->
+<p>Всего сыграно игр: <span th:text="${gamesCount}"></span></p>
+
+<!-- Требование 9.2 -->
+<p>Всего сделано попыток: <span th:text="${totalAttempts}"></span></p>
+
+<p>Спасибо за игру!</p>
+
+<a href="/">Начать заново</a>
+
+</body>
+</html>

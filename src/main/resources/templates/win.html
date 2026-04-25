@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадай число — Победа!</title>
+</head>
+<body>
+
+<h1>Поздравляю! Ты угадал!</h1>
+
+<!-- Требование 7.1 -->
+<p>Загаданное число: <span th:text="${secretNumber}"></span></p>
+
+<!-- Требование 7.2 -->
+<p>Понадобилось попыток: <span th:text="${attempts}"></span></p>
+
+<!-- Требование 7.3 -->
+<h2>Хочешь сыграть ещё?</h2>
+<a href="/start">Да, новая игра!</a>
+&nbsp;
+<a href="/end">Нет, показать итоги</a>
+
+</body>
+</html>
